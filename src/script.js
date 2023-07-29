@@ -47,10 +47,11 @@ const runMultipleTimes = async (totalTimes) => {
         if (filteredArr.length) {
             filteredArr.forEach((photo) => {
                 exec(`${command} https:${photo.url}`)
+                console.log(`\nDEU BOM!\nNome: ${photo.nome}\nUrl: ${photo.url}\n`)
             })
-           return console.log(`Deu bom ${filteredArr}`)
-        }
+        } else {
         return console.log('Deu ruim, sem matchs');
+        }
       } 
         count++;
 
